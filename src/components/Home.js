@@ -10,7 +10,7 @@ export default class Home extends React.Component {
         <div>
             <ul>
                 <li>
-                    <Link to="">Add book to reading list</Link>
+                    <Link to="/add">Add book to reading list</Link>
                 </li>
                 <li>
                     <Link to="">View my reading list</Link>

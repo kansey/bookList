@@ -1,15 +1,15 @@
 import React, { Component, PropTypes} from 'react';
 
-const Add = ({}) => {
+const Add = ({ changeAuthor, changeTitle, changeAllpage, changeCurrentPage, changeStatus, handleClick}) => {
     return (
         <div>
             <p>Add Book</p>
-            <span>Author:</span><input type="text" />
-            <span>Title:</span><input type="text" />
-            <span>All page:</span><input type="number" />
-            <span>Current page:</span><input type="number" />
+            <span>Author:</span><input type="text" onChange={changeAuthor}/>
+            <span>Title:</span><input type="text" onChange={changeTitle}/>
+            <span>All page:</span><input type="number" onChange={changeAllpage}/>
+            <span>Current page:</span><input type="number" onChange={changeCurrentPage}/>
             <span>Status:</span>
-            <select size="3">
+            <select size="3" onChange={changeStatus}>
                 <option value="read">
                     read
                 </option>
@@ -20,11 +20,18 @@ const Add = ({}) => {
                     want to read
                 </option>
             </select>
-            <button >Add book</button>
+            <button onClick={handleClick}>Add book</button>
         </div>
     );
 }
 
-Add.propTypes = {};
+Add.propTypes = {
+    changeAuthor: PropTypes.func.isRequired,
+    changeTitle: PropTypes.func.isRequired,
+    changeAllpage: PropTypes.func.isRequired,
+    changeCurrentPage: PropTypes.func.isRequired,
+    changeStatus: PropTypes.func.isRequired,
+    handleClick: PropTypes.func.isRequired
+};
 
 export default Add;

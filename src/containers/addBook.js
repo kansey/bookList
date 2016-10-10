@@ -4,17 +4,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../actions/add';
 
-
-/*
-export default class HomePage extends React.Component {
-  render() {
-    return (
-      <AddBook />
-    );
-  }
-}
-*/
-
 function mapStateToProps(state) {
   return {
     state: state
